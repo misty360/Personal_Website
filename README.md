@@ -1,6 +1,6 @@
 # Personal Website
 
-This is my personal website — a portfolio built with **React** and **Tailwind CSS**, designed to showcase my projects, skills, and background.
+This is my personal website—a portfolio built with **React** and **Tailwind CSS**, designed to showcase my projects, skills, and background.
 
 It includes:
 - A custom animated gradient background
@@ -30,5 +30,5 @@ It includes:
    npm run dev
 
 ## Deployment
-Deployed with Vercel — supports continuous deployment from the main branch.
+Deployed with Vercel as it supports continuous deployment from the main branch.
 

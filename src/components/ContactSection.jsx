@@ -136,7 +136,7 @@ export const ContactSection = () => {
             </h3>
             <form
               onSubmit={handleSubmit}
-              action="https://formsubmit.co/akathiresan@ucdavis.edu"
+              action="https://formsubmit.co/abirami.vkathir@gmail.com"
               method="POST"
               className="space-y-6"
             >

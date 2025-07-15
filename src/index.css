@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+/* ========== Animated Gradient Background ========== */
+@keyframes animatedGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(
+    135deg,
+    #0f0c29 0%,
+    #302b63 25%,
+    #24243e 50%,
+    #4a00e0 75%,
+    #8e2de2 100%
+  );
+  background-size: 500% 500%;
+  animation: animatedGradient 30s ease-in-out infinite;
+  filter: blur(40px);
+  opacity: 0.6;
+}
+
+/* ========== Starfield Overlay ========== */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background-image: radial-gradient(white 1px, transparent 1px);
+  background-size: 2px 2px;
+  opacity: 0.1;
+}
+
+/* ========== Transparent Containers ========== */
+body,
+#root,
+main,
+section {
+  background-color: transparent !important;
+}
+
+/* ========== Theme Variables ========== */
+@theme {
+  --color-border: hsl(var(--border));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-card: hsl(var(--card));
+  --color-accent: hsl(var(--accent));
+}
+
+/* ========== Base Styles ========== */
+@layer base {
+  :root {
+    --background: 248 61% 10%;             /* deep indigo-black */
+    --foreground: 250 25% 90%;             /* silvery violet */
+    --card: 245 20% 18%;                   /* translucent deep purple */
+    --primary: 268 88% 70%;                /* neon purple */
+    --primary-foreground: 0 0% 100%;       /* white */
+    --border: 260 24% 40%;                 /* dim violet border */
+    --accent: 193 94% 68%;                 /* neon cyan */
+  }
+
+  .dark {
+    --background: 248 60% 8%;
+    --foreground: 250 25% 94%;
+    --card: 248 15% 15%;
+    --primary: 277 92% 72%;                /* laser magenta */
+    --primary-foreground: 0 0% 100%;
+    --border: 255 20% 32%;
+    --accent: 180 100% 65%;                /* electric teal */
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply text-zinc-100 dark:text-white transition-colors duration-500;
+    background-color: transparent;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* ========== Utilities ========== */
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+  @media (width >= 640px) { max-width: 640px; }
+  @media (width >= 768px) { max-width: 768px; }
+  @media (width >= 1024px) { max-width: 1024px; }
+  @media (width >= 1280px) { max-width: 1280px; }
+  @media (width >= 1400px) { max-width: 1400px; }
+}
+
+@utility text-glow {
+  @apply relative;
+  text-shadow: 0 0 15px rgba(142, 45, 226, 0.6);
+}
+
+@utility card-hover {
+  @apply transition-transform duration-300 hover:scale-[1.03] hover:shadow-2xl;
+  background: rgba(36, 36, 62, 0.5);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@utility gradient-border {
+  @apply relative rounded-xl;
+  background: linear-gradient(90deg, hsl(var(--accent)), hsl(var(--card)), hsl(var(--accent)));
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+
+@utility cosmic-button {
+  @apply px-6 py-2 rounded-full bg-primary text-white font-semibold 
+         transition-all duration-300
+         hover:bg-primary/80
+         hover:shadow-[0_0_15px_3px_rgba(142,45,226,0.5)]
+         active:scale-95;
+}
+
+@utility star {
+  @apply absolute rounded-full bg-white;
+  box-shadow: 0 0 12px 3px rgba(255, 255, 255, 0.12);
+}
+
+@utility meteor {
+  @apply absolute bg-gradient-to-r from-white via-accent to-transparent rounded-full;
+  box-shadow: 0 0 20px 8px rgba(19, 255, 247, 0.25);
+}
+
+/* ========== Global Layout ========== */
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}

@@ -23,10 +23,10 @@ It includes:
    git clone https://github.com/misty360/Personal_Website.git
    cd Personal_Website
 
-2. Install Dependencies
+2. Install Dependencies:
    npm run install
 
-3. Start the development server 
+3. Start the development server: 
    npm run dev
 
 ## Deployment

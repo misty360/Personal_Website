@@ -22,10 +22,10 @@ export const AboutSection = () => {
 
         <div className="max-w-3xl mx-auto space-y-6 text-center text-slate-300">
           <p className="animate-fade-in-delay-2">
-            I'm a <span className="font-semibold text-primary">Data Science</span> major at UC Davis, minoring in Computer Science and Technology Management. I’m passionate about building software that bridges technical precision with real-world impact—whether through <span className="font-semibold text-primary">data-driven tools</span>, intuitive user interfaces, or scalable backend systems.
+            I'm a <span className="font-semibold text-primary">Data Science</span> major at UC Davis, minoring in Computer Science and Technology Management. I’m passionate about building software that bridges technical precision with real-world impact—whether through <span className="font-semibold text-primary">data-driven tools</span>, <span className="font-semibold text-primary">intuitive user interfaces</span>, or <span className="font-semibold text-primary">scalable backend systems</span>.
           </p>
           <p className="animate-fade-in-delay-3">
-            I’ve worked on diverse teams to design, build, and deploy real products. My experience spans <span className="font-semibold text-primary">web development</span>, <span className="font-semibold text-primary">machine learning</span>, and <span className="font-semibold text-primary">product management</span>. I enjoy collaborating across disciplines to turn complex problems into thoughtful, user-first solutions.
+            I’ve worked on diverse teams to design, build, and deploy real products. My experience spans <span className="font-semibold text-primary">software development</span>, <span className="font-semibold text-primary">machine learning</span>, and <span className="font-semibold text-primary">product management</span>. I enjoy collaborating across disciplines to turn complex problems into thoughtful, user-first solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center animate-fade-in-delay-4">
             <a
@@ -38,7 +38,7 @@ export const AboutSection = () => {
               href="/Resume [2026].pdf"
               className="px-8 py-3 rounded-full border border-primary text-primary hover:bg-primary/10 transition"
             >
-              Resume
+              View Resume
             </a>
           </div>
         </div>
@@ -48,7 +48,7 @@ export const AboutSection = () => {
           {[
             {
               icon: <Code className="h-7 w-7 text-primary" />,
-              title: "Web Development",
+              title: "Software Development",
               desc: "From full-stack apps to responsive interfaces, I build fast, accessible websites using modern frameworks.",
             },
             {

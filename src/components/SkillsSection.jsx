@@ -6,20 +6,27 @@ const skillCategories = {
     "Java",
     "Python",
     "JavaScript",
+    "TypeScript",
     "HTML",
     "CSS",
     "C++",
     "R",
     "SQL",
     "Bash",
+    "YAML"
   ],
   "Frameworks & Libraries": [
     "Spring Boot",
     "React",
     "Node.js",
+    "Express.js",
     "BrainFlow",
     "MNE",
     "scikit-learn",
+    "PyTorch",
+    "NumPy",
+    "Matplotlib",
+    "Spark"
   ],
   Tools: [
     "Git",
@@ -36,6 +43,7 @@ const skillCategories = {
     "MySQL",
     "PostgreSQL",
     "MongoDB",
+    "PCF"
   ],
 };
 

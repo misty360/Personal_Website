@@ -2,6 +2,11 @@ import { ArrowRight } from "lucide-react";
 
 const projects = [
   {
+    title: "UC Davis Mobile App",
+    description: `A full-stack mobile development initiative focused on improving campus services for UC Davis students. Features library room reservations, real-time campus transit tracking, access to student resources, and responsive experiences powered by backend integrations. Developed synchronization logic using SQLite and Drizzle ORM to provide immediate booking updates despite third-party API delays while enforcing reservation consistency through optimistic locking.`,    
+    tags: ["React Native", "TypeScript", "SQLite", "Drizzle ORM", "Expo", "API Integration"],
+  },
+  {
     title: "Deportation Risk Detector",
     description: `A machine learning-driven application that continuously scrapes, monitors, and analyzes immigration-related news articles from trusted sources. Utilizes advanced NLP and pattern recognition to assess the potential risk of deportation for international students. Results are presented through an interactive Streamlit dashboard, enabling real-time, personalized insights and pro-active risk management.`,
     tags: ["Python", "Machine Learning", "NLP", "Web Scraping", "Streamlit"],
@@ -15,11 +20,6 @@ const projects = [
     title: "Focus Prediction BCI",
     description: `A novel Brain-Computer Interface pipeline for real-time focus detection built on EEG data. Combines signal acquisition using OpenBCI, feature extraction via MNE, and machine learning models for focus inference. Integrates a Python-Selenium automation module to control media playback (pause/resume) dynamically, creating seamless interaction between neurotechnology and real-world applications.`,
     tags: ["OpenBCI", "Python", "EEG", "MNE", "Machine Learning", "Selenium"],
-  },
-  {
-    title: "UC Davis Mobile App",
-    description: `A full-stack mobile development initiative focused on improving campus services for UC Davis students. Features library room reservations, real-time campus transit tracking, access to student resources, and responsive experiences powered by backend integrations. Developed synchronization logic using SQLite and Drizzle ORM to provide immediate booking updates despite third-party API delays while enforcing reservation consistency through optimistic locking.`,    
-    tags: ["React Native", "TypeScript", "SQLite", "Drizzle ORM", "Expo", "API Integration"],
   }
 ];
 
